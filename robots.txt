@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://yifruhailu806-debug.github.io/sitemap.xml
