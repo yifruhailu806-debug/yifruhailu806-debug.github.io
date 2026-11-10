@@ -229,24 +229,38 @@ button:focus-visible {
 }
 
 /* ==========================================
-   4. SMART PROFESSIONAL PROFILE PHOTO
+   4. MODERN PROFESSIONAL PROFILE PHOTO
    ========================================== */
 
 .portrait-wrap {
     justify-self: center;
     text-align: center;
+    position: relative;
 }
 
 .portrait-frame {
-    width: 300px;
-    height: 355px;
-    border: 7px solid #ffffff;
-    border-radius: 150px 150px 24px 24px;
+    width: 320px;
+    height: 380px;
+    padding: 5px;
+    border: 1px solid #d7e7f2;
+    border-radius: 22px;
     overflow: hidden;
     position: relative;
     background: linear-gradient(145deg, #d8eaf7, #f3f8fc);
-    box-shadow: 0 20px 50px rgba(16,43,80,.16);
+    box-shadow:
+        0 20px 50px rgba(16,43,80,.14),
+        0 5px 15px rgba(23,107,154,.08);
     transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.portrait-frame::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(255,255,255,.8);
+    border-radius: 21px;
+    pointer-events: none;
+    z-index: 2;
 }
 
 .portrait-frame img {
@@ -257,10 +271,11 @@ button:focus-visible {
     position: absolute;
     inset: 0;
     display: block;
+    border-radius: 17px;
 }
 
 .portrait-frame:hover {
-    transform: translateY(-7px);
+    transform: translateY(-7px) rotate(1deg);
     box-shadow: 0 28px 60px rgba(16,43,80,.22);
 }
 
@@ -774,9 +789,14 @@ footer {
     }
 
     .portrait-frame {
-        width: 220px;
-        height: 265px;
+        width: 230px;
+        height: 280px;
         margin: auto;
+        border-radius: 18px;
+    }
+
+    .portrait-frame img {
+        border-radius: 13px;
     }
 
     .section {
